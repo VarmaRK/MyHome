@@ -47,14 +47,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, "ClickedLetter:" + letterList[position], Toast.LENGTH_LONG).show();
-
                 Intent intent = new Intent(MainActivity.this, CGPPActivity.class);
                 intent.putExtra("DisGRPID", String.valueOf(position));
                 intent.putExtra("subcatposition", "0");
                 // intent.putExtra("category","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-
                 startActivity(intent);
-
             }
 
         });
