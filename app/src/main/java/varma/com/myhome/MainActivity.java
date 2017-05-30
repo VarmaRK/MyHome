@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnNotification;
     private Button btnPhotos;
     private Button btnFCM;
+    private Button btnDiscussions;
+
     GridView gridView;
     String letterList[] = {"", "", "", "", "", ""};
     int lettersIcon[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f};
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Home");
 
+    /*
         gridView = (GridView) findViewById(R.id.gridView);
         GridAdapter adapter = new GridAdapter(MainActivity.this, lettersIcon, letterList);
         gridView.setAdapter(adapter);
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        */
        /******************************************************************************************************************/
 
         btnNotification = (Button) findViewById(R.id.btnNotifications);
@@ -88,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Clicked Photos", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), DisplayFCMTokenActivity.class);
               //  intent.putExtra("Category", "Photos");
+                startActivity(intent);
+            }
+
+        });
+
+
+        btnDiscussions = (Button) findViewById(R.id.btnDiscussions);
+        btnDiscussions.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Clicked Photos", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), DiscussionHomeActivity.class);
                 startActivity(intent);
             }
 
@@ -135,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /*
     public void notificationClick(View v){
         Toast.makeText(getApplicationContext(), "Clicked Photos", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, MyHomeImageLoadActivity.class);
@@ -150,4 +167,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         // finish(); If enable Hardware back button closes the app and will not navigate to the back screen
     }
+    */
 }

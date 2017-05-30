@@ -14,6 +14,7 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,14 +31,14 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name="varma.com.fcm.MyFirebaseMessagingService">
+        <service android:name="varma.com.fcm.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".DisplayFCMTokenActivity"></activity>
+        <activity android:name=".DisplayFCMTokenActivity" />
+        <activity android:name=".DiscussionHomeActivity"></activity>
     </application>
 
 </manifest>
