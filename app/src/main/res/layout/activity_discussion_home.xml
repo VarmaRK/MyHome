@@ -5,22 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="varma.com.myhome.DiscussionHomeActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"
+        />
 
-    <TextView
-        android:id="@+id/DiscussionLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bg_main"
-        android:text="Discussions"
-        android:textAlignment="center"
-        android:textColor="@color/bg_register"
-        android:textSize="36sp" />
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/DiscussionLabel"
+        android:layout_below="@+id/toolbar"
         android:background="@color/bg_main"
         android:backgroundTint="@color/bg_main"
         android:horizontalSpacing="0dp"

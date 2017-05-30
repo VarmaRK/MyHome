@@ -60,6 +60,33 @@
         />
 
     <Button
+        android:id="@+id/btnMyFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/bg_main"
+        android:text="My Flat"
+        android:layout_weight="1"
+        android:textColor="@color/bg_register"
+        android:textSize="30sp"
+        tools:background="@color/colorPrimary"
+        android:layout_below="@+id/btnDiscussions"
+        />
+
+    <Button
+        android:id="@+id/btnKeyContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/bg_main"
+        android:text="KeyContacts"
+        android:layout_weight="1"
+        android:textColor="@color/bg_register"
+        android:textSize="30sp"
+        tools:background="@color/colorPrimary"
+        android:layout_below="@+id/btnMyFlat"
+        />
+
+
+    <Button
         android:id="@+id/btnFCM"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
