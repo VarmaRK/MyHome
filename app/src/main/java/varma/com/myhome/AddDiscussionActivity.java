@@ -49,13 +49,15 @@ public class AddDiscussionActivity extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("NewDiscussion");
+        getSupportActionBar().setTitle("Add Discussion");
+
 
         // Back Navigation
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
 
         Intent intent = getIntent();
         Bundle intentBundle = getIntent().getExtras();
@@ -173,6 +175,8 @@ public class AddDiscussionActivity extends AppCompatActivity {
                 Intent intent = new Intent(AddDiscussionActivity.this, CGPPActivity.class);
                 intent.putExtra("DisGRPID", DisGRPID);
                 startActivity(intent);
+                finish(); // To stop Back Navigation issue.Alternativly in Manifest use <activity android:name=".SplashActivity" android:noHistory="true"/>
+
                 //  TextView textViewResult = (TextView) findViewById(R.id.textViewResult);
                 // textViewResult.setText("Inserted");
             }

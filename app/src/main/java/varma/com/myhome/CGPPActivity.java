@@ -246,5 +246,6 @@ public class CGPPActivity extends AppCompatActivity {
         in.putExtra("DisGRPID", DisGRPID);
         startActivity(in);
 
+
     }
 }
