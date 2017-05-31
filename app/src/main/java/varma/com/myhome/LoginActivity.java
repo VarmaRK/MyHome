@@ -211,7 +211,8 @@ public class LoginActivity extends Activity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Registering Device...");
         progressDialog.show();
-        final String URL_REGISTER_DEVICE = "http://192.168.3.2/FcmSimplifiedCoding/RegisterDevice.php";
+      //  final String URL_REGISTER_DEVICE = "http://192.168.3.2/FcmSimplifiedCoding/RegisterDevice.php";
+        final String URL_REGISTER_DEVICE = AppConfig.URL_REGISTERDEVICE;
         final String token = SharedPrefManager.getInstance(this).getDeviceToken();
         // final String email = editTextEmail.getText().toString();
         final String email = Email;

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import varma.com.app.AppConfig;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -35,7 +35,8 @@ public class DisplayFCMTokenActivity extends AppCompatActivity  implements View.
     private ProgressDialog progressDialog;
 
     //URL to RegisterDevice.php
-    private static final String URL_REGISTER_DEVICE = "http://192.168.3.2/FcmSimplifiedCoding/RegisterDevice.php";
+   // private static final String URL_REGISTER_DEVICE = "http://192.168.3.2/FcmSimplifiedCoding/RegisterDevice.php";
+    private static final String URL_REGISTER_DEVICE = AppConfig.URL_REGISTERDEVICE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

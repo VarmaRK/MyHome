@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import varma.com.app.AppConfig;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -155,7 +155,9 @@ public class AddDiscussionActivity extends AppCompatActivity {
                 nameValuePairs.add(new BasicNameValuePair("Field7", name));
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
-                    HttpPost httpPost = new HttpPost("http://192.168.3.2/mhConversationsUpdate.php");
+
+                    HttpPost httpPost = new HttpPost(AppConfig.URL_DIS_UPDATE);
+
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     HttpResponse response = httpClient.execute(httpPost);
                     HttpEntity entity = response.getEntity();

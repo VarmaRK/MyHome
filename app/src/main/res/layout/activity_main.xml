@@ -1,102 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:background="@color/colorPrimary"
-    tools:context="varma.com.myhome.MainActivity">
+    tools:context="varma.com.myhome.MainActivity"
+    app:columnCount="2"
+
+    >
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/tool_bar"
-        />
+        app:layout_column="0"
+        app:layout_columnSpan="2"
+        app:layout_gravity="fill_horizontal"
+    />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/myLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginBottom="-1dp"
-        android:layout_marginTop="-1dp"
-        android:background="@color/bg_main"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnNotifications"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/bg_main"
-            android:text="Notice"
-            android:textColor="@color/bg_register"
-            android:textSize="30sp"
-            android:visibility="visible"
-            android:layout_weight="1"
-            tools:background="@color/colorPrimary" />
+    <Button
+        android:id="@+id/btnNotifications"
+        android:layout_weight="1"
+        android:backgroundTint="@color/bg_main"
+        android:text="Notice"
+        android:textColor="@color/bg_register"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_column="0"
+        app:layout_columnSpan="1"
+        app:layout_gravity="center"
+        app:layout_rowSpan="2"
+        tools:background="@color/colorPrimary" />
 
         <Button
             android:id="@+id/btnPhotos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
             android:backgroundTint="@color/bg_main"
             android:text="Photos"
-            android:layout_weight="1"
+
             android:textColor="@color/bg_register"
-            android:textSize="30sp"
-            tools:background="@color/colorPrimary" />
-    </LinearLayout>
+            android:textSize="15sp"
+            tools:background="@color/colorPrimary"
+
+            app:layout_column="1"
+            app:layout_columnSpan="1"
+            app:layout_rowSpan="2"
+            app:layout_gravity="center"
+            />
+
 
     <Button
         android:id="@+id/btnDiscussions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:backgroundTint="@color/bg_main"
         android:text="Discussions"
-        android:layout_weight="1"
+
         android:textColor="@color/bg_register"
-        android:textSize="30sp"
+        android:textSize="15sp"
         tools:background="@color/colorPrimary"
-        android:layout_below="@+id/myLinearLayout"
+        app:layout_column="0"
+        app:layout_columnSpan="1"
+        app:layout_gravity="center_horizontal"
+
         />
 
     <Button
         android:id="@+id/btnMyFlat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:backgroundTint="@color/bg_main"
         android:text="My Flat"
-        android:layout_weight="1"
+
         android:textColor="@color/bg_register"
-        android:textSize="30sp"
+        android:textSize="15sp"
         tools:background="@color/colorPrimary"
-        android:layout_below="@+id/btnDiscussions"
+        app:layout_column="1"
+        app:layout_columnSpan="1"
+        app:layout_gravity="center_horizontal"
+
         />
 
     <Button
         android:id="@+id/btnKeyContacts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:backgroundTint="@color/bg_main"
         android:text="KeyContacts"
-        android:layout_weight="1"
+
         android:textColor="@color/bg_register"
-        android:textSize="30sp"
+        android:textSize="15sp"
         tools:background="@color/colorPrimary"
-        android:layout_below="@+id/btnMyFlat"
+        app:layout_column="0"
+        app:layout_columnSpan="1"
+        app:layout_gravity="center_horizontal"
+
         />
 
 
     <Button
         android:id="@+id/btnFCM"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnDiscussions"
+
+
         android:backgroundTint="@color/bg_login"
         android:text="Firebase CM"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:visibility="gone"
-        tools:background="@color/colorPrimary" />
+        tools:background="@color/colorPrimary"
+        app:layout_column="1"
+        app:layout_columnSpan="1"
+        app:layout_gravity="center_horizontal"
+
+        />
 
 
  <!--
@@ -126,4 +140,4 @@
         tools:background="@color/bg_main" />
 -->
 
-</RelativeLayout>
+</android.support.v7.widget.GridLayout>

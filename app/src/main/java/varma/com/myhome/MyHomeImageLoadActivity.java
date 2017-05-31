@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-
+import varma.com.app.AppConfig;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
@@ -39,7 +39,8 @@ public class MyHomeImageLoadActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
   //  private static final String endpoint = "http://api.androidhive.info/json/glide.json";
    // private static final String endpoint = "http://192.168.3.2/myImages.php";
-    private String endpoint = "http://192.168.3.2/myImages.php";
+ //   private String endpoint = "http://192.168.3.2/myImages.php";
+  private String endpoint = AppConfig.URL_IMAGES;
     private String Category = "";
     private ArrayList<Image> images;
     private ProgressDialog pDialog;
@@ -69,7 +70,8 @@ public class MyHomeImageLoadActivity extends AppCompatActivity {
 
         if(intentBundle != null) {
             Category = intentBundle.getString("Category", "");
-            endpoint = "http://192.168.3.2/myImages.php?Category="+Category;
+         //   endpoint = "http://192.168.3.2/myImages.php?Category="+Category;
+            endpoint = AppConfig.URL_IMAGES+"?Category="+Category;
         }
 
 

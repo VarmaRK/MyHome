@@ -15,7 +15,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
+import varma.com.app.AppConfig;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -130,8 +130,8 @@ public class CGPPActivity extends AppCompatActivity {
                 DefaultHttpClient httpclient = new DefaultHttpClient(new BasicHttpParams());
 
          //       String myURL = "http://192.168.3.2/mhConversations.php?ID="+"'+DisGRPID+'";
-                String myURL = "http://192.168.3.2/mhConversations.php?DisGRPID="+DisGRPID;
-
+         //       String myURL = "http://192.168.3.2/mhConversations.php?DisGRPID="+DisGRPID;
+                String myURL = AppConfig.URL_DIS+"?DisGRPID="+DisGRPID;
                 HttpPost httppost = new HttpPost(myURL);
                 httppost.setHeader("Content-type", "application/json");
                 InputStream inputStream = null;

@@ -14,7 +14,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
+import varma.com.app.AppConfig;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -122,7 +122,8 @@ public class ConversationForum extends AppCompatActivity {
             protected String doInBackground(String... params) {
                 DefaultHttpClient httpclient = new DefaultHttpClient(new BasicHttpParams());
            //     String myURL = "http://192.168.3.2/mhConversations.php";
-                String myURL = "http://192.168.3.2/mhDiscussionViewReply.php?ID="+Id_Query;
+           //     String myURL = "http://192.168.3.2/mhDiscussionViewReply.php?ID="+Id_Query;
+                String myURL = AppConfig.URL_DIS_REPLY+"?ID="+Id_Query;
                 HttpPost httppost = new HttpPost(myURL);
                 httppost.setHeader("Content-type", "application/json");
                 InputStream inputStream = null;
@@ -258,7 +259,8 @@ public class ConversationForum extends AppCompatActivity {
                 nameValuePairs.add(new BasicNameValuePair("Field7", name));
             try {
                     HttpClient httpClient = new DefaultHttpClient();
-                HttpPost httpPost = new HttpPost("http://192.168.3.2/mhConversationsUpdate.php");
+            //    HttpPost httpPost = new HttpPost("http://192.168.3.2/mhConversationsUpdate.php");
+                HttpPost httpPost = new HttpPost(AppConfig.URL_DIS_UPDATE);
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     HttpResponse response = httpClient.execute(httpPost);
                     HttpEntity entity = response.getEntity();
