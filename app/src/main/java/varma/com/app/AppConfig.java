@@ -13,14 +13,14 @@ public class AppConfig {
 	public static String URL_DIS_REPLY = "http://192.168.3.2/mhDiscussionViewReply.php";
 */
 
-    public static String URL_LOGIN = "http://varmaserver.bitnamiapp.com/varmaphp/LogIn/login.php";
-    public static String URL_REGISTER = "http://varmaserver.bitnamiapp.com/varmaphp/LogIn/register.php";
+    public static String URL = "http://varmaserver.bitnamiapp.com";
 
-    public static String URL_REGISTERDEVICE = "http://varmaserver.bitnamiapp.com/varmaphp/FcmSimplifiedCoding/RegisterDevice.php";
-
-    public static String URL_IMAGES = "http://varmaserver.bitnamiapp.com/varmaphp/myImages.php";
-    public static String URL_DIS_UPDATE = "http://varmaserver.bitnamiapp.com/varmaphp/mhConversationsUpdate.php";
-    public static String URL_DIS = "http://varmaserver.bitnamiapp.com/varmaphp/mhConversations.php";
-    public static String URL_DIS_REPLY = "http://varmaserver.bitnamiapp.com/varmaphp/mhDiscussionViewReply.php";
+    public static String URL_LOGIN = URL+"/varmaphp/LogIn/login.php";
+    public static String URL_REGISTER = URL+"/varmaphp/LogIn/register.php";
+    public static String URL_REGISTERDEVICE = URL+"/varmaphp/FcmSimplifiedCoding/RegisterDevice.php";
+    public static String URL_IMAGES = URL+"/varmaphp/myImages.php";
+    public static String URL_DIS_UPDATE = URL+"/varmaphp/mhConversationsUpdate.php";
+    public static String URL_DIS = URL+"/varmaphp/mhConversations.php";
+    public static String URL_DIS_REPLY = URL+"/varmaphp/mhDiscussionViewReply.php";
 
 }

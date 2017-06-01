@@ -14,7 +14,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
-
+import varma.com.adapter.MainGridAdapter;
 import varma.com.helper.SQLiteHandler;
 import varma.com.helper.SessionManager;
 
@@ -41,26 +41,48 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Home");
 
-    /*
+
         gridView = (GridView) findViewById(R.id.gridView);
-        GridAdapter adapter = new GridAdapter(MainActivity.this, lettersIcon, letterList);
-        gridView.setAdapter(adapter);
+
+        MainGridAdapter maingridadapter = new MainGridAdapter(MainActivity.this, lettersIcon, letterList);
+        gridView.setAdapter(maingridadapter);
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "ClickedLetter:" + letterList[position], Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, CGPPActivity.class);
-                intent.putExtra("DisGRPID", String.valueOf(position));
-                intent.putExtra("subcatposition", "0");
+
+                if(position == 0){
+                    Intent intent = new Intent(getApplicationContext(), MyHomeImageLoadActivity.class);
+                    intent.putExtra("Category", "Notifications");
+                    startActivity(intent);
+                }
+                else if(position == 1){
+                    Intent intent = new Intent(getApplicationContext(), MyHomeImageLoadActivity.class);
+                    intent.putExtra("Category", "Photos");
+                    startActivity(intent);
+                }
+                else if(position == 2){
+
+                    Intent intent = new Intent(getApplicationContext(), DiscussionHomeActivity.class);
+                    startActivity(intent);
+                }
+                else if(position == 3){
+
+                    Intent intent = new Intent(getApplicationContext(), DisplayFCMTokenActivity.class);
+                    startActivity(intent);
+                }
+              //  Intent intent = new Intent(MainActivity.this, CGPPActivity.class);
+              //  intent.putExtra("DisGRPID", String.valueOf(position));
+              //  intent.putExtra("subcatposition", "0");
                 // intent.putExtra("category","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-                startActivity(intent);
+             //   startActivity(intent);
             }
 
         });
-        */
-       /******************************************************************************************************************/
 
+       /******************************************************************************************************************/
+        /*
         btnNotification = (Button) findViewById(R.id.btnNotifications);
         btnNotification.setOnClickListener(new View.OnClickListener() {
 
@@ -107,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-        });
+        });*/
        /*******************************************************************************************************************/
     }
 

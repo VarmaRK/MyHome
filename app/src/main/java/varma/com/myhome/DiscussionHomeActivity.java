@@ -35,6 +35,7 @@ public class DiscussionHomeActivity extends AppCompatActivity {
 
 
         gridView = (GridView) findViewById(R.id.gridView);
+
         GridAdapter adapter = new GridAdapter(DiscussionHomeActivity.this, lettersIcon, letterList);
         gridView.setAdapter(adapter);
 

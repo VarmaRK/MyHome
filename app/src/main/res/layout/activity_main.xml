@@ -8,7 +8,6 @@
     tools:background="@color/colorPrimary"
     tools:context="varma.com.myhome.MainActivity"
     app:columnCount="2"
-
     >
 
     <include
@@ -19,6 +18,20 @@
         app:layout_gravity="fill_horizontal"
     />
 
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/bg_main"
+        android:backgroundTint="@color/bg_main"
+        android:horizontalSpacing="0dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="0dp"
+        tools:background="@color/bg_main" />
+
+<!--
     <Button
         android:id="@+id/btnNotifications"
         android:layout_weight="1"
@@ -111,7 +124,7 @@
         app:layout_gravity="center_horizontal"
 
         />
-
+-->
 
  <!--
     <TextView
