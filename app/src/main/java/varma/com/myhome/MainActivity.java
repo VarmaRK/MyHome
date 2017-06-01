@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDiscussions;
 
     GridView gridView;
-    String letterList[] = {"", "", "", "", "", ""};
-    int lettersIcon[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f};
+    String letterList[] = {"", "", "", ""};
+    //int lettersIcon[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f};
+     int lettersIcon[] = {R.drawable.notifications, R.drawable.discussions, R.drawable.photos, R.drawable.messaging};
     Toolbar toolbar;
 
     private SessionManager session;
@@ -58,13 +59,12 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(position == 1){
-                    Intent intent = new Intent(getApplicationContext(), MyHomeImageLoadActivity.class);
-                    intent.putExtra("Category", "Photos");
+                    Intent intent = new Intent(getApplicationContext(), DiscussionHomeActivity.class);
                     startActivity(intent);
                 }
                 else if(position == 2){
-
-                    Intent intent = new Intent(getApplicationContext(), DiscussionHomeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MyHomeImageLoadActivity.class);
+                    intent.putExtra("Category", "Photos");
                     startActivity(intent);
                 }
                 else if(position == 3){

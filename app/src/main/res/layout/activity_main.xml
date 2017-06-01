@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:background="@color/colorPrimary"
+    android:layout_height="match_parent"
     tools:context="varma.com.myhome.MainActivity"
-    app:columnCount="2"
-    >
+     >
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/tool_bar"
-        app:layout_column="0"
-        app:layout_columnSpan="2"
-        app:layout_gravity="fill_horizontal"
     />
 
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:background="@color/bg_main"
         android:backgroundTint="@color/bg_main"
-        android:horizontalSpacing="0dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="0dp"
+        android:horizontalSpacing="-1dp"
+        android:numColumns="3"
+        android:verticalSpacing="-1dp"
+        android:paddingRight="10dp"
+
         tools:background="@color/bg_main" />
 
 <!--
@@ -153,4 +149,4 @@
         tools:background="@color/bg_main" />
 -->
 
-</android.support.v7.widget.GridLayout>
+</RelativeLayout>

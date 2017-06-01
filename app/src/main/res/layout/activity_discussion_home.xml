@@ -14,13 +14,15 @@
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:background="@color/bg_main"
         android:backgroundTint="@color/bg_main"
         android:horizontalSpacing="0dp"
-        android:numColumns="auto_fit"
+        android:numColumns="2"
         android:verticalSpacing="0dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         tools:background="@color/bg_main" />
 
 </RelativeLayout>
